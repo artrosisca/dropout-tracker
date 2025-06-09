@@ -1,7 +1,8 @@
 import pandas as pd
+import numpy as np
 
-db_path = "students-database.xlsx"
+db_path = "students-database.csv"
 
-df_alunos = pd.read_excel(db_path, sheet_name=0, engine="openpyxl", skiprows=1)
+df = pd.read_csv(db_path, encoding='utf-8', skiprows=2)
 
-# todo: muita coisa
+print(df['Sexo'].values)
