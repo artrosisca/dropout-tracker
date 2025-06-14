@@ -13,16 +13,23 @@ def criar_dataframe_relacao_alunos(relacao_alunos):
                                 'Sexo', 'Estado', 'Situação Atual do Aluno' ]].copy()
     
     #Adiciona a idade como coluna calculada
-    dados_relacao['Idade'] = relacao_alunos['Ano Ingresso'] - pd.to_datetime(relacao_alunos['Data Nascimento'], format='%d/%m/%Y').dt.year
+    dados_relacao['Idade'] = relacao_alunos['Ano Ingresso'] - pd.to_datetime(
+                                                                relacao_alunos['Data Nascimento'], format='%d/%m/%Y').dt.year
     
-    # Tratamento de nulos
+    # Tratamento de nulos/ausentes
     dados_relacao['Sigla Cota'].fillna('Nao Cotista', inplace=True)
+
+    dados_relacao['Escola Pública?'] = dados_relacao['Escola Pública?'].astype(str).str.strip()
+    dados_relacao['Escola Pública?'] = dados_relacao['Escola Pública?'].replace(['-', 'nan', 'NaN', 'None'], pd.NA)
     dados_relacao['Escola Pública?'].fillna('Escola Pública', inplace=True)
+    
+    dados_relacao['Coeficiente'] = pd.to_numeric(dados_relacao['Coeficiente'], errors='coerce')
     media_coeficiente = dados_relacao['Coeficiente'].mean()
     dados_relacao['Coeficiente'].fillna(media_coeficiente, inplace=True)
+    
     media_enem = dados_relacao['Nota Enem'].mean()
     dados_relacao['Nota Enem'].fillna(media_enem, inplace=True)
-
+    
     return dados_relacao
 
 def criar_dataframe_historico(historico):
