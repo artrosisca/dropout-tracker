@@ -1,4 +1,16 @@
 import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Modelos a serem importados
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
 
 db_path = "alunos.xlsx"
 
@@ -77,7 +89,10 @@ def criar_dataframe_final(relacao_alunos, historico, socioeconomico):
     
     return df_final
 
-base_df = criar_dataframe_final(relacao_alunos, historico, socioeconomico)
+def main():
+    base_df = criar_dataframe_final(relacao_alunos, historico, socioeconomico)
+    print(f'DataFrame final criado com {len(base_df)} registros e {len(base_df.columns)} colunas.')
+    base_df.to_excel('alunos_unificado.xlsx', index=False)
 
-print(f'DataFrame final criado com {len(base_df)} registros e {len(base_df.columns)} colunas.')
-base_df.to_excel('alunos_unificado.xlsx', index=False)
+if __name__ == "__main__":
+    main()
