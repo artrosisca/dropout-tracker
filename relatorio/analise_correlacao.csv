@@ -1,0 +1,61 @@
+;Correlacao
+grupo (étnico)_Não declarado;0,3097572635211755
+idade;0,16810477156397408
+escola pública?_-;0,08402310239860047
+sigla cota_Categoria 2;0,07238565805690833
+tipo de cota_Categoria 2 - cotista oriundo de família com renda, comprovada, igual ou inferior a 1,5 salários mínimos (um salário-mínimo e meio) per capita e autodeclarado preto, autodeclarado pardo ou autodeclarado indígena;0,07238565805690833
+forma de ingresso_Vestibular;0,05385500116931481
+escore vest;0,03681911084114894
+tipo de cota_Ampla concorrência;0,0347910020482624
+sigla cota_Não cotista;0,0347910020482624
+sigla cota_Cotista;0,03286230808405886
+tipo de cota_Cotista;0,03286230808405886
+sexo_F;0,027203967764979776
+tipo de cota_Categoria 1 - cotista oriundo de família com renda, comprovada, igual ou inferior a 1,5 salários mínimos (um salário-mínimo e meio) per capita e que não se declarou preto, pardo ou indígena;0,02440205113690751
+sigla cota_Categoria 1;0,02440205113690751
+sigla cota_Categoria 4;0,02425293908991405
+tipo de cota_Categoria 4 - cotista independente de renda (sem necessidade de comprovação) e autodeclarado preto, autodeclarado pardo ou autodeclarado indígena;0,02425293908991405
+forma de ingresso_Aproveitamento de Curso;0,023364437519098284
+grupo (étnico)_Sem informação;0,01107142606070088
+curso_Ciência Da Computação;0,001272512110089956
+forma de ingresso_Complementação da lista de espera do SISU;0,0011862548822677477
+QTD_REPROVACOES_FREQ;-0,00023323946636310606
+curso_Curso Superior De Tecnologia Em Análise E Desenvolvimento De Sistemas;-0,001272512110089956
+tipo de cota_Categoria 3 - cotista independente de renda (sem necessidade de comprovação) e que não se declarou preto, pardo ou indígena;-0,008642707219644493
+sigla cota_Categoria 3;-0,008642707219644493
+escola pública?_Escola Particular;-0,010165031698784764
+escola pública?_Escola Pública;-0,01180071228630679
+forma de ingresso_SISU - Sistema de Seleção Unificada;-0,011871277346816688
+tipo de cota_Sem política de cotas;-0,012291392184055285
+sigla cota_Sem cotas;-0,012291392184055285
+tipo de cota_Candidatos com deficiência que, independentemente da renda (art. 14, II, Portaria Normativa nº 18/2012), tenham cursado integralmente o ensino médio em escolas públicas (Lei nº 12.711/2012).;-0,022357888996850074
+sigla cota_Categoria L13 (3C);-0,022357888996850074
+grupo (étnico)_Indígena;-0,022681552080126725
+sigla cota_Categoria L10 (2C);-0,022681552080126725
+tipo de cota_Candidatos com deficiência autodeclarados pretos, pardos ou indígenas, que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas (Lei nº 12.711/2012);-0,022681552080126725
+forma de ingresso_PEC-G - Programa de Estudantes Convênio de Graduação;-0,022681552080126725
+sexo_M;-0,027203967764979776
+grupo (étnico)_Preta;-0,030825486448923575
+sigla cota_Categoria L02 (2S);-0,03215487397484066
+tipo de cota_Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas (Lei nº 12.711/2012).;-0,03215487397484066
+forma de ingresso_Transferência;-0,033301343687036765
+per. ingresso;-0,03387181880658143
+forma de ingresso_Transferência ex-officio;-0,045399206915001246
+tipo de cota_Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda (art. 14, II, Portaria Normativa nº 18/2012), tenham cursado integralmente o ensino médio em escolas públicas (Lei nº 12.711/2012).;-0,050769020550866746
+sigla cota_Categoria L06 (4S);-0,050769020550866746
+nota enem;-0,07118105769156
+grupo (étnico)_Amarela;-0,07192043698688153
+tipo de cota_Candidatos que, independentemente da renda (art. 14, II, Portaria Normativa nº 18/2012), tenham cursado integralmente o ensino médio em escolas públicas (Lei nº 12.711/2012).;-0,07677236587108364
+sigla cota_Categoria L05 (3S);-0,07677236587108364
+grupo (étnico)_Parda;-0,09116669844739195
+forma de ingresso_Reopção de Curso;-0,10234298417778735
+tipo de cota_Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas (Lei nº 12.711/2012).;-0,11202313106325937
+sigla cota_Categoria L01 (1S);-0,11202313106325937
+QTD_REPROVACOES_NOTA;-0,15526141830027335
+grupo (étnico)_Branca;-0,21354939747473176
+ano ingresso;-0,21591561344830074
+coeficiente;-0,5468336682357399
+MEDIA_FREQUENCIA;-0,5547269518528439
+período do aluno;-0,6132942500996751
+MEDIA_NOTAS;-0,6288523440788815
+TAXA_APROVACAO;
