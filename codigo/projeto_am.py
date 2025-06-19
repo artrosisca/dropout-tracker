@@ -56,7 +56,7 @@ def preparar_dados_finais(df_alunos, df_historico_agg):
     df_master = pd.merge(df_alunos, df_historico_agg, on='id', how='left')
     
     # --- COLUNA RENOMEADA AQUI ---
-    df_master['EVASAO'] = (df_master['situacao_atual'] == 'Desistente').astype(int)
+    df_master['Evasao'] = (df_master['situacao_atual'] == 'Desistente').astype(int)
 
     df_master.set_index('id', inplace=True)
     
@@ -116,9 +116,19 @@ def analisar_e_salvar_resultados(df_analise, pasta_relatorio):
 
 
 if __name__ == '__main__':
-    PASTA_DADOS = 'dados'
-    PASTA_RELATORIO = 'relatorio'
+    # Constrói os caminhos de forma dinâmica
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+
+    # Define os caminhos para as pastas de dados e relatório na raiz do projeto
+    PASTA_DADOS = os.path.join(project_root, 'dados')
+    PASTA_RELATORIO = os.path.join(project_root, 'relatorio') # Salvará o relatório na raiz
+
     CAMINHO_ARQUIVO_ENTRADA = os.path.join(PASTA_DADOS, 'base.xlsx')
+    
+    # Cria a pasta de relatório se não existir
+    if not os.path.exists(PASTA_RELATORIO):
+        os.makedirs(PASTA_RELATORIO)
 
     df_alunos, df_historico = carregar_dados_essenciais(CAMINHO_ARQUIVO_ENTRADA)
     df_historico_agg = processar_historico(df_historico)
