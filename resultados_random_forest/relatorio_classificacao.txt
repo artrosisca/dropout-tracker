@@ -1,0 +1,12 @@
+Relatório de Classificação - Random Forest
+==================================================
+Acurácia Global: 88.10%
+
+              precision    recall  f1-score   support
+
+  Não Evadiu       0.88      0.88      0.88       192
+      Evadiu       0.88      0.88      0.88       186
+
+    accuracy                           0.88       378
+   macro avg       0.88      0.88      0.88       378
+weighted avg       0.88      0.88      0.88       378

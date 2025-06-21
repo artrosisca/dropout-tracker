@@ -1,0 +1,12 @@
+Relatório de Classificação - Regressão Logística
+==================================================
+Acurácia Global: 85.71%
+
+              precision    recall  f1-score   support
+
+  Não Evadiu       0.87      0.84      0.86       192
+      Evadiu       0.84      0.87      0.86       186
+
+    accuracy                           0.86       378
+   macro avg       0.86      0.86      0.86       378
+weighted avg       0.86      0.86      0.86       378
