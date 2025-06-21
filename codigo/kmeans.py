@@ -43,9 +43,9 @@ def gerar_df_final_para_kmeans(caminho_base):
         print("df_final gerado com sucesso pelo pipeline de 'projeto_am.py'.")
 
         # Selecionar apenas as colunas numéricas que serão features para o K-Means
-        # Excluir 'id' e 'EVASAO' (ou 'Situacao' original, que gera EVASAO)
+        # Excluir 'id' e 'Evasao' (ou 'Situacao' original, que gera Evasao)
         features_para_kmeans = df_final.select_dtypes(include=np.number).drop(
-            columns=['id', 'EVASAO'], errors='ignore'
+            columns=['id', 'Evasao'], errors='ignore'
         )
 
         # Tratar NaNs nas features (substituir por mediana) - K-Means não lida com NaNs
@@ -61,8 +61,8 @@ def gerar_df_final_para_kmeans(caminho_base):
             print("Não há valores NaN nas features numéricas. Ótimo!")
 
         print(f"Dados preparados para K-Means. Número de features: {features_para_kmeans.shape[1]}")
-        # Retorna as features para K-Means e também id/EVASAO para análise pós-cluster
-        return features_para_kmeans, df_final[['id', 'EVASAO']].copy()
+        # Retorna as features para K-Means e também id/Evasao para análise pós-cluster
+        return features_para_kmeans, df_final[['id', 'Evasao']].copy()
 
     except Exception as e:
         print(f"Erro ao gerar df_final a partir de 'projeto_am.py': {e}")
@@ -94,7 +94,7 @@ def visualizar_clusters(X_scaled, clusters, df_info, n_clusters, pasta_saida):
 
     df_viz = pd.DataFrame(X_pca, columns=['PC1', 'PC2'])
     df_viz['Cluster'] = clusters
-    df_viz['EVASAO'] = df_info['EVASAO'].values
+    df_viz['Evasao'] = df_info['Evasao'].values
 
     plt.figure(figsize=(10, 8))
     sns.scatterplot(x='PC1', y='PC2', hue='Cluster', data=df_viz, palette='viridis', legend='full', s=50, alpha=0.7)
@@ -107,7 +107,7 @@ def visualizar_clusters(X_scaled, clusters, df_info, n_clusters, pasta_saida):
     plt.close()
 
     plt.figure(figsize=(8, 6))
-    sns.countplot(x='Cluster', hue='EVASAO', data=df_viz, palette='viridis')
+    sns.countplot(x='Cluster', hue='Evasao', data=df_viz, palette='viridis')
     plt.title(f'Distribuição de Evasão por Cluster K-Means ({n_clusters} clusters)')
     plt.xlabel('Cluster')
     plt.ylabel('Contagem de Alunos')

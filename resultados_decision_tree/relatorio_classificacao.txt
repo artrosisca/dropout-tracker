@@ -1,0 +1,10 @@
+Acurácia Global: 87.04%
+
+              precision    recall  f1-score   support
+
+  Não Evadiu       0.87      0.88      0.87       192
+      Evadiu       0.87      0.87      0.87       186
+
+    accuracy                           0.87       378
+   macro avg       0.87      0.87      0.87       378
+weighted avg       0.87      0.87      0.87       378
